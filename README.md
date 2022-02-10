@@ -1,5 +1,7 @@
 # Django + Tailwind Starter Template
 
+> :hourglass_flowing_sand: Under development
+
 Getting started -
 
 1. Clone repo 
