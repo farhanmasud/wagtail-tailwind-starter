@@ -1,10 +1,10 @@
-# Django + Tailwind Starter Template
+# Wagtail + Tailwind Starter Template
 
 > :hourglass_flowing_sand: Under development
 
 Getting started -
 
-1. Clone repo with your project name `git clone git@github.com:farhanmasud/django-tailwind-starter-template.git your-project-name`
+1. Clone repo with your project name `git clone git@github.com:farhanmasud/wagtail-tailwind-starter.git your-project-name`
 2. Setup .env file following the example env file
 3. Make all bash scripts executable with `find . -type f -iname "*.sh" -exec chmod +x {} \;`
 4. Run `bash remove-git-remote.sh` script to remove git remote link
@@ -15,3 +15,4 @@ Getting started -
 9. Install tailwind dependencies with `python manage.py tailwind install`
 10. Run migrations with `python manage.py migrate`
 11. Collect static `python manage.py collectstatic --no-input`
+12. Update your Wagtail site name on config > settings > base.py > WAGTAIL_SITE_NAME variable

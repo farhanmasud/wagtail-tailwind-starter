@@ -6,3 +6,4 @@ requirements/*.txt
 media/
 staticfiles/
 theme/static_src/node_modules
+.vscode/
