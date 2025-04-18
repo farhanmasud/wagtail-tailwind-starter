@@ -12,3 +12,5 @@ sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "ALTER ROLE $DB_USER SET client_
 sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "ALTER ROLE $DB_USER SET default_transaction_isolation TO 'read committed';"
 sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "ALTER ROLE $DB_USER SET timezone TO 'UTC';"
 sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
+sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "ALTER DATABASE $DB_NAME OWNER TO $DB_USER;"
+sudo PGPASSWORD=$PGPASSWORD -u postgres psql -c "GRANT ALL ON SCHEMA public TO $DB_USER;"
