@@ -1,3 +1,0 @@
-# requirements-prod.in
--c requirements.txt
-gunicorn==20.1.0
