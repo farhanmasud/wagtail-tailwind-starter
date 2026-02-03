@@ -69,6 +69,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -119,6 +120,7 @@ DATABASES = {
         "USER": env("DB_USER"),
         "PASSWORD": env("DB_PASSWORD"),
         "HOST": env("DB_HOST"),
+        "PORT": env("DB_PORT", default=5432),
     }
 }
 

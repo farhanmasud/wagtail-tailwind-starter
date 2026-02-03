@@ -3,12 +3,12 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# whitenoise and django debug toolbar for development
-INSTALLED_APPS = (
-    ["whitenoise.runserver_nostatic"]
-    + INSTALLED_APPS
-    + ["debug_toolbar", "django_browser_reload", "django_extensions"]
-)
+# django debug toolbar for development
+INSTALLED_APPS = INSTALLED_APPS + [
+    "debug_toolbar",
+    "django_browser_reload",
+    "django_extensions",
+]
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
