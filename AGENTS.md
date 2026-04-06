@@ -15,7 +15,7 @@ This file provides instructions for AI agents working on this Django + Wagtail +
 
 ```bash
 bash setup-uv.sh                 # Setup venv and install deps with uv
-source venv/bin/activate
+source .venv/bin/activate
 python manage.py tailwind install
 bash setup-db.sh                 # Setup PostgreSQL database
 

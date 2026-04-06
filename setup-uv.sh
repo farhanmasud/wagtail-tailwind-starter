@@ -39,11 +39,11 @@ if ! command -v uv &> /dev/null; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# Create virtual environment
-uv venv venv
+# Create virtual environment (.venv is the uv/IDE convention)
+uv venv
 
 # Activate virtual environment
-source venv/bin/activate
+source .venv/bin/activate
 
 # If no flag provided, ask interactively
 if [ -z "$ENV_TYPE" ]; then
@@ -65,14 +65,15 @@ if [ -z "$ENV_TYPE" ]; then
 fi
 
 # Install dependencies based on environment
+# uv sync reads pyproject.toml + uv.lock for deterministic installs
 if [[ "$ENV_TYPE" == "dev" ]]; then
     echo "Setting up Development environment..."
-    uv pip install -r pyproject.toml --extra dev
+    uv sync --extra dev
 elif [[ "$ENV_TYPE" == "prod" ]]; then
     echo "Setting up Production environment..."
-    uv pip install -r pyproject.toml --extra prod
+    uv sync --extra prod
 fi
 
 echo ""
 echo "Setup complete! To activate the environment, run:"
-echo "source venv/bin/activate"
+echo "source .venv/bin/activate"
