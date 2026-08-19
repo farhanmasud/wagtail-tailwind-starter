@@ -1,9 +1,26 @@
-.venv
+# Virtual environments — any manager
+.venv/
+venv/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
+.ruff_cache/
+
+# Django runtime
+db.sqlite3
+db.sqlite3-journal
 requirements/*.txt
-.env
 media/
 staticfiles/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+
 theme/static_src/node_modules
+theme/static/css/dist/
+.DS_Store
+.idea/
 .vscode/
